@@ -7,6 +7,18 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+//Backend API Route Handling
+const routesHandler = require("./routes/handler")
+app.use('/', routesHandler);
+
+// DB Connection with MongoDB
+mongoose.connect(process.env.DB_URI, { useNewUrlParser: true })
+.then ( () => {
+        console.group("DB Connected!");
+})
+.catch ( (err) => {
+    console.log(err);
+});
 
 const port = process.env.PORT || 4000;
 
