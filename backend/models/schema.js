@@ -16,8 +16,8 @@ const mealSchema = {
     foods: [foodSchema]
 };
 
-const Item = mongoose.model("Food", foodSchema);
+const Food = mongoose.model("Food", foodSchema);
 const Meal = mongoose.model("Meal", mealSchema);
 const Size = mongoose.model("Size", sizeSchema);
 
-module.exports = { Item, Meal, Size };
+module.exports = { Food, Meal, Size };
