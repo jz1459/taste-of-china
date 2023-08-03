@@ -31,7 +31,7 @@ function Contact() {
                                     <li>Saturday: 10:30 AM - 9:30 PM </li>
                                     <li>Sunday: Closed </li>
                                 </ul>
-                                <h1>Notable Holiday Hours</h1>
+                                <h1>Holiday Hours</h1>
                                 <ul>
                                     <li>Christmas</li>
                                 </ul>

@@ -2,22 +2,18 @@ const mongoose = require("mongoose");
 
 const sizeSchema = {
     size: String,
-    price: Number,
+    price: String,
 };
 
 const foodSchema = {
     name: String,
-    price: Number,
+    price: String,
+    category: String,
     variants: [sizeSchema]
 };
 
-const mealSchema = {
-    name: String,
-    foods: [foodSchema]
-};
 
 const Food = mongoose.model("Food", foodSchema);
-const Meal = mongoose.model("Meal", mealSchema);
 const Size = mongoose.model("Size", sizeSchema);
 
-module.exports = { Food, Meal, Size };
+module.exports = { Food, Size };
