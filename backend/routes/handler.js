@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { Food, Size, Lunch } = require("../models/schema");
+const { Food, Size, Lunch, Hours, Holidays } = require("../models/schema");
 
 router.get('/api/allday', async (req, res) => {
     const foods = await Food.find({});
@@ -13,5 +13,14 @@ router.get('/api/lunch', async (req, res) => {
     res.send(lunch);
 });
 
+router.get('/api/hours', async (req, res) => {
+    const hours = await Hours.find({});
+    res.send(hours);
+});
+
+router.get('/api/holidays', async (req, res) => {
+    const holidays = await Holidays.find({});
+    res.send(holidays);
+});
 
 module.exports = router;

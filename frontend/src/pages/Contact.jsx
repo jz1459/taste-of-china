@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { Container, Row, Col } from "react-bootstrap";
 
 function Contact() {
+    const hoursUrl = "http://localhost:4000/api/hours";
+    const holidaysUrl = "http://localhost:4000/api/holidays";
+
+    const [hours, setHours] = useState([]);
+    const [holidays, setHolidays] = useState([]);
+
+    useEffect(() => {
+        getHours();
+        getHolidays();
+    }, []);
+
+    const getHours = async () => {
+        const res = await axios.get(hoursUrl);
+        setHours(res.data);
+    };
+
+    const getHolidays = async () => {
+        const res = await axios.get(holidaysUrl);
+        setHolidays(res.data);
+    };
+
     return (
         <section className="contact" id="contact">
             <Container>
@@ -23,6 +45,12 @@ function Contact() {
                             <Col size={8}>
                                 <h1>Hours</h1>
                                 <ul>
+                                    {hours.map(day =>
+                                        <li>{day.day}: {day.hours}</li>
+                                    )}
+                                </ul>
+                                
+                                {/* <ul>
                                     <li>Monday: 10:30 AM - 9:30 PM </li>
                                     <li>Tuesday: 10:30 AM - 9:30 PM </li>
                                     <li>Wednesday: 10:30 AM - 9:30 PM </li>
@@ -30,11 +58,16 @@ function Contact() {
                                     <li>Friday: 10:30 AM - 9:30 PM </li>
                                     <li>Saturday: 10:30 AM - 9:30 PM </li>
                                     <li>Sunday: Closed </li>
-                                </ul>
+                                </ul> */}
                                 <h1>Holiday Hours</h1>
                                 <ul>
-                                    <li>Christmas</li>
+                                    {holidays.map(day =>
+                                        <li>{day.day}: {day.hours}</li>
+                                    )}
                                 </ul>
+                                {/* <ul>
+                                    <li>Christmas</li>
+                                </ul> */}
                             </Col>
                         </Row>
                     </div>
