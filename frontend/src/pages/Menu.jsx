@@ -1,5 +1,4 @@
 import React from "react";
-import { Route } from "react-router-dom";
 
 
 function Menu() {
@@ -9,8 +8,10 @@ function Menu() {
     return (
         <section className="menu" id="menu">
             <div className="menu-navbar">
-                <Route path="/menu/allday"></Route>
-                <Route path="/menu/lunch"></Route>
+                <h1>Please Select a Menu</h1>
+                <a href="/menu/lunch">Lunch</a>
+                <a href="/menu/allday">All-day</a>
+                <p>Menu & prices are subject to change without notice.</p>
             </div>
         </section>
     );

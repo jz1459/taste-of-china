@@ -12,8 +12,14 @@ const foodSchema = {
     variants: [sizeSchema]
 };
 
+const lunchSchema = {
+    name: String,
+    price: String,
+    category: String
+};
 
 const Food = mongoose.model("Food", foodSchema);
 const Size = mongoose.model("Size", sizeSchema);
+const Lunch = mongoose.model("Lunch", lunchSchema)
 
-module.exports = { Food, Size };
+module.exports = { Food, Size, Lunch };

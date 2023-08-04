@@ -2,3 +2,11 @@
     overflow: auto;
     white-space: nowrap;
 }
+
+.sub-menu-content{
+    position: absolute;
+    display: none;
+}
+.sub-menu:hover .sub-menu-content{
+    display:block;
+}
