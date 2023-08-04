@@ -1,13 +1,6 @@
-// have all the get requests here
-// then have a navbar at the top for the dropdowns (chow mein, fried rice etc.)
-// then have the items.map for everysing.e one with different getters and setters and useeffects
-// have a singular getRequest
-// then filter each into the 19 seperate food categories
-// then set as normal
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Container, Row, Col} from "react-bootstrap";
+import { Container, Row, Col, Navbar, Nav} from "react-bootstrap";
 
 function Allday() {
     const url = "http://localhost:4000/api/allday";
@@ -48,6 +41,39 @@ function Allday() {
 
     return (
         <section className="allday-menu">
+            <Navbar expand="md">
+                <Container>
+                    <Navbar.Brand href="/menu">
+                        <p>All-day Menu</p>
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav">
+                        <span className="navbar-toggler-icon"></span>
+                    </Navbar.Toggle>
+                    {/* <Navbar.Collapse id="basic-navbar-nav"> */}
+                        <Nav className="ms-auto">
+                            <Nav.Link href="#appetizers" id='appetizersLink' className="navbar-link">Appetizers</Nav.Link>
+                            <Nav.Link href="#soup" id='soupLink' className="navbar-link">Soup</Nav.Link>
+                            <Nav.Link href="#friedRice" id='friedRiceLink' className="navbar-link">Fried Rice</Nav.Link>
+                            <Nav.Link href="chowMein" id='chowMeinLink' className="navbar-link">Chow Mein</Nav.Link>
+                            <Nav.Link href="#chopSuey" id='chopSueyLink' className="navbar-link">Chop Suey</Nav.Link>
+                            <Nav.Link href="#sweetAndSour" id='sweetAndSourLink' className="navbar-link">Sweet And Sour</Nav.Link>
+                            <Nav.Link href="#eggFooYoung" id='eggFooYoungLink' className="navbar-link">Egg Foo Young</Nav.Link>
+                            <Nav.Link href="#curry" id='curryLink' className="navbar-link">Curry</Nav.Link>
+                            <Nav.Link href="#loMein" id='loMeinLink' className="navbar-link">Lo Mein</Nav.Link>
+                            <Nav.Link href="#chowFun" id='chowFunLink' className="navbar-link">Chow Fun</Nav.Link>
+                            <Nav.Link href="#pork" id='porkLink' className="navbar-link">Pork</Nav.Link>
+                            <Nav.Link href="#chicken" id='chickenLink' className="navbar-link">Chicken</Nav.Link>
+                            <Nav.Link href="#beef" id='beefLink' className="navbar-link">Beef</Nav.Link>
+                            <Nav.Link href="#seafood" id='seafoodLink' className="navbar-link">Seafood</Nav.Link>
+                            <Nav.Link href="#specialRecs" id='specialRecsLink' className="navbar-link">Special Recommendations</Nav.Link>
+                            <Nav.Link href="#healthFood" id='healthFoodLink' className="navbar-link">Health Food Special</Nav.Link>
+                            <Nav.Link href="#chefsSpecial" id='chefsSpecialLink' className="navbar-link">Chef's Specials</Nav.Link>
+                            <Nav.Link href="#specialCombo" id='specialComboLink' className="navbar-link">Special Combination Plates</Nav.Link>
+                            <Nav.Link href="#sideOrder" id='sideOrderLink' className="navbar-link">Side Orders</Nav.Link>
+                        </Nav>
+                    {/* </Navbar.Collapse> */}
+                </Container>
+            </Navbar>
             <Container>
                 <div className="appetizers" id="appetizers">
                     <div className="sectionHeader">
