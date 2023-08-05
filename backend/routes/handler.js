@@ -46,7 +46,7 @@ router.post('/api/login', async (req, res) => {
     }
 });
 
-// router.get('/api/edit', login, async (req, res) => {
+// router.post('/api/edit', login, async (req, res) => {
 
 // })
 

@@ -1,11 +1,13 @@
 import React from "react";
-
+import { Container } from "react-bootstrap";
 function Footer() {
     return (
-        <div className="footer" id="footer">
-            <p>&copy; Jason Zheng. All Rights Reserved</p>
-            <a href="/login">Admin Use Only</a>
-        </div>
+        <section className="footer" id="footer">
+            <Container>
+                <p>&copy; Jason Zheng. All Rights Reserved</p>
+                <a href="/login">Admin Use Only</a>
+            </Container>
+        </section>
     );
 };
 
