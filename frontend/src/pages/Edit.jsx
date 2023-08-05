@@ -40,47 +40,221 @@ function Edit() {
     const [lunchPrice, setLunchPrice] = useState("");
     const [dayName, setDayName] = useState("");
     const [hours, setHours] = useState("");
-    const [holidays, setHolidays] = useState("");
+    const [holidayName, setHolidayName] = useState("");
     const [holidayHours, setHolidayHours] = useState("");
 
     // Routing for the updating, creating and deleting
     const createFood = async (foodName, foodPrice, foodCategory) => {
-        // put in a paremeter that tells us which route to use so we can refactor our code
-        const res = await axios.post(foodUrl, { foodName, foodPrice, foodCategory }, {headers: authHeader()});
-        setFoodName("");
-        setFoodPrice("");
-        setFoodCategory("");
-        if (res.status == 200) {
-            alert("Successfully added: " + "Name: " + JSON.stringify(res.data.name) + " Price: " + JSON.stringify(res.data.price) + " Category: " + JSON.stringify(res.data.category));
-        } else {
-            alert("Didn't work, check your spelling.");
+        try {
+            const res = await axios.post(foodUrl, { foodName, foodPrice, foodCategory }, { headers: authHeader() });
+            setFoodName("");
+            setFoodPrice("");
+            setFoodCategory("");
+            if (res.status === 200 && res.data) {
+                alert("Successfully added:  Name: " + JSON.stringify(res.data.name) + " Price: " + JSON.stringify(res.data.price) + " Category: " + JSON.stringify(res.data.category));
+            } else {
+                alert("Didn't work, check your spelling.");
+            }
+        } catch (error) {
+            setFoodName("");
+            setFoodPrice("");
+            setFoodCategory("");
+            alert(error.response.data);
         }
     };
 
     const updateFood = async (foodName, foodPrice) => {
-        const res = await axios.put(foodUrl, { foodName, foodPrice }, {headers: authHeader()});
-        setFoodName("");
-        setFoodPrice("");
-        if (res.status === 200 && res.data) {
-            alert("Successfully updated: " + "Name: " + JSON.stringify(res.data.name) + " Price: " + JSON.stringify(res.data.price) + " Category: " + JSON.stringify(res.data.category));
-        } else {
-            alert("Didn't work, check your spelling.");
+        try {
+            const res = await axios.put(foodUrl, { foodName, foodPrice }, { headers: authHeader() });
+            setFoodName("");
+            setFoodPrice("");
+            setFoodCategory("");
+            if (res.status === 200 && res.data) {
+                alert("Successfully updated:  Name: " + JSON.stringify(res.data.name) + " Price: " + JSON.stringify(res.data.price) + " Category: " + JSON.stringify(res.data.category));
+            } else {
+                alert("Didn't work, check your spelling.");
+            }
+        } catch (error) {
+            setFoodName("");
+            setFoodPrice("");
+            setFoodCategory("");
+            alert(error.response.data);
         }
     };
 
     const deleteFood = async (foodName) => {
-        const res = await axios.delete(foodUrl, { data: { foodName },  headers: authHeader()});
-        setFoodName("");
-        console.log(res);
-        if (res.status == 200 && res.data) {
-            alert("Successfully deleted: " + "Name: " + JSON.stringify(res.data.name) + " Price: " + JSON.stringify(res.data.price) + " Category: " + JSON.stringify(res.data.category));
-        } else {
-            alert("Didn't work, check your spelling.");
+        try {
+            const res = await axios.delete(foodUrl, { data: { foodName }, headers: authHeader() });
+            setFoodName("");
+            setFoodPrice("");
+            setFoodCategory("");
+            if (res.status === 200 && res.data) {
+                alert("Successfully deleted:  Name: " + JSON.stringify(res.data.name) + " Price: " + JSON.stringify(res.data.price) + " Category: " + JSON.stringify(res.data.category));
+            } else {
+                alert("Didn't work, check your spelling.");
+            }
+        } catch (error) {
+            setFoodName("");
+            setFoodPrice("");
+            setFoodCategory("");
+            alert(error.response.data);
+        }
+    };
+
+    const createLunch = async (lunchName, lunchPrice) => {
+        try {
+            const res = await axios.post(lunchUrl, { lunchName, lunchPrice }, { headers: authHeader() });
+            setLunchName("");
+            setLunchPrice("");
+            if (res.status === 200 && res.data) {
+                alert("Successfully added:  Name: " + JSON.stringify(res.data.name) + " Price: " + JSON.stringify(res.data.price));
+            } else {
+                alert("Didn't work, check your spelling.");
+            }
+        } catch (error) {
+            setLunchName("");
+            setLunchPrice("");
+            alert(error.response.data);
+        }
+    };
+
+    const updateLunch = async (lunchName, lunchPrice) => {
+        try {
+            const res = await axios.put(lunchUrl, { lunchName, lunchPrice }, { headers: authHeader() });
+            setLunchName("");
+            setLunchPrice("");
+            if (res.status === 200 && res.data) {
+                alert("Successfully updated:  Name: " + JSON.stringify(res.data.name) + " Price: " + JSON.stringify(res.data.price));
+            } else {
+                alert("Didn't work, check your spelling.");
+            }
+        } catch (error) {
+            setLunchName("");
+            setLunchPrice("");
+            alert(error.response.data);
+        }
+    };
+
+    const deleteLunch = async (lunchName) => {
+        try {
+            const res = await axios.delete(lunchUrl, { data: { lunchName }, headers: authHeader() });
+            setLunchName("");
+            setLunchPrice("");
+            if (res.status === 200 && res.data) {
+                alert("Successfully deleted:  Name: " + JSON.stringify(res.data.name) + " Price: " + JSON.stringify(res.data.price));
+            } else {
+                alert("Didn't work, check your spelling.");
+            }
+        } catch (error) {
+            setLunchName("");
+            setLunchPrice("");
+            alert(error.response.data);
+        }
+    };
+
+    const createHours = async (dayName, hours) => {
+        try {
+            const res = await axios.post(hoursUrl, { dayName, hours }, { headers: authHeader() });
+            setDayName("");
+            setHours("");
+            if (res.status === 200 && res.data) {
+                alert("Successfully added:  Days: " + JSON.stringify(res.data.day) + " Time: " + JSON.stringify(res.data.hours));
+            } else {
+                alert("Didn't work, check your spelling.");
+            }
+        } catch (error) {
+            setDayName("");
+            setHours("");
+            alert(error.response.data);
+        }
+    };
+
+    const updateHours = async (dayName, hours) => {
+        try {
+            const res = await axios.put(hoursUrl, { dayName, hours }, { headers: authHeader() });
+            setDayName("");
+            setHours("");
+            if (res.status === 200 && res.data) {
+                alert("Successfully updated:  Days: " + JSON.stringify(res.data.day) + " Time: " + JSON.stringify(res.data.hours));
+            } else {
+                alert("Didn't work, check your spelling.");
+            }
+        } catch (error) {
+            setDayName("");
+            setHours("");
+            alert(error.response.data);
+        }
+    };
+
+    const deleteHours = async (dayName) => {
+        try {
+            const res = await axios.delete(hoursUrl, { data: { dayName }, headers: authHeader() });
+            setDayName("");
+            setHours("");
+            if (res.status === 200 && res.data) {
+                alert("Successfully deleted:  Days: " + JSON.stringify(res.data.day) + " Time: " + JSON.stringify(res.data.hours));
+            } else {
+                alert("Didn't work, check your spelling.");
+            }
+        } catch (error) {
+            setDayName("");
+            setHours("");
+            alert(error.response.data);
+        }
+    };
+
+    const createHoliday = async (holidayName, holidayHours) => {
+        try {
+            const res = await axios.post(holidaysUrl, { holidayName, holidayHours }, { headers: authHeader() });
+            setHolidayName("");
+            setHolidayHours("");
+            if (res.status === 200 && res.data) {
+                alert("Successfully added:  Holiday: " + JSON.stringify(res.data.day) + " Time: " + JSON.stringify(res.data.hours));
+            } else {
+                alert("Didn't work, check your spelling.");
+            }
+        } catch (error) {
+            setHolidayName("");
+            setHolidayHours("");
+            alert(error.response.data);
+        }
+    };
+
+    const updateHoliday = async (holidayName, holidayHours) => {
+        try {
+            const res = await axios.put(holidaysUrl, { holidayName, holidayHours }, { headers: authHeader() });
+            setHolidayName("");
+            setHolidayHours("");
+            if (res.status === 200 && res.data) {
+                alert("Successfully updated:  Holiday: " + JSON.stringify(res.data.day) + " Time: " + JSON.stringify(res.data.hours));
+            } else {
+                alert("Didn't work, check your spelling.");
+            }
+        } catch (error) {
+            setHolidayName("");
+            setHolidayHours("");
+            alert(error.response.data);
+        }
+    };
+
+    const deleteHoliday = async (holidayName) => {
+        try {
+            const res = await axios.delete(holidaysUrl, { data: { holidayName }, headers: authHeader() });
+            setHolidayName("");
+            setHolidayHours("");
+            if (res.status === 200 && res.data) {
+                alert("Successfully deleted:  Holiday: " + JSON.stringify(res.data.day) + " Time: " + JSON.stringify(res.data.hours));
+            } else {
+                alert("Didn't work, check your spelling.");
+            }
+        } catch (error) {
+            setHolidayName("");
+            setHolidayHours("");
+            alert(error.response.data);
         }
     };
 
     return (
-        // Put in the axios routing for the reamining CUD operations for lunch, holiday, hours, allday schemas
         <section className="edit" id="edit">
             <Container>
                 <Row>
@@ -102,12 +276,27 @@ function Edit() {
                 </div>
                 <div className="editHeader">
                     <h1>Edit Lunch Menu</h1>
+                    <input type="text" placeholder="Food Name" value={lunchName} onChange={(event) => setLunchName(event.target.value)} />
+                    <input type="text" placeholder="Food Price" value={lunchPrice} onChange={(event) => setLunchPrice(event.target.value)} />
+                    <button onClick={() => createLunch(lunchName, lunchPrice)}>Create New Food</button>
+                    <button onClick={() => updateLunch(lunchName, lunchPrice)}>Update Food Price</button>
+                    <button onClick={()=> deleteLunch(lunchName)}>Delete Food</button>
                 </div>
                 <div className="editHeader">
                     <h1>Edit Hours</h1>
+                    <input type="text" placeholder="Day" value={dayName} onChange={(event) => setDayName(event.target.value)} />
+                    <input type="text" placeholder="Time" value={hours} onChange={(event) => setHours(event.target.value)} />
+                    <button onClick={() => createHours(dayName, hours)}>Add New Times</button>
+                    <button onClick={() => updateHours(dayName, hours)}>Update Times</button>
+                    <button onClick={()=> deleteHours(dayName)}>Delete Times</button>
                 </div>
                 <div className="editHeader">
                     <h1>Edit Holidays</h1>
+                    <input type="text" placeholder="Holiday" value={holidayName} onChange={(event) => setHolidayName(event.target.value)} />
+                    <input type="text" placeholder="Time" value={holidayHours} onChange={(event) => setHolidayHours(event.target.value)} />
+                    <button onClick={() => createHoliday(holidayName, holidayHours)}>Add New Holiday</button>
+                    <button onClick={() => updateHoliday(holidayName, holidayHours)}>Update Holiday</button>
+                    <button onClick={()=> deleteHoliday(holidayName)}>Delete Holiday</button>
                 </div>
             </Container>
         </section>

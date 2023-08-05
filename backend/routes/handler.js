@@ -60,7 +60,9 @@ router.post('/api/edit/all-day', login, async (req, res) => {
 
 router.put('/api/edit/all-day', login, async (req, res) => {
     const { foodName, foodPrice } = req.body;
-    const results = await Food.findOneAndUpdate({ name: foodName }, { price: foodPrice });
+    const results = await Food.findOneAndUpdate({ name: foodName }, { price: foodPrice }, {
+        new: true
+    });
     res.json(results);
 });
 
@@ -70,7 +72,77 @@ router.delete('/api/edit/all-day', login, async (req, res) => {
     res.json(results);
 });
 
+router.post('/api/edit/lunch', login, async (req, res) => {
+    const { lunchName, lunchPrice } = req.body;
+    const newLunch = new Lunch({
+        name: lunchName,
+        price: lunchPrice,
+        variants: []
+    });
+    const results = await newLunch.save();
+    res.json(results);
+});
 
-router.post('/api/logout' )
+router.put('/api/edit/lunch', login, async (req, res) => {
+    const { lunchName, lunchPrice } = req.body;
+    const results = await Lunch.findOneAndUpdate({ name: lunchName }, { price: lunchPrice }, {
+        new: true
+    });
+    res.json(results);
+});
+
+router.delete('/api/edit/lunch', login, async (req, res) => {
+    const { lunchName } = req.body;
+    const results = await Lunch.findOneAndDelete({ name: lunchName });
+    res.json(results);
+});
+
+router.post('/api/edit/hours', login, async (req, res) => {
+    const { dayName, hours } = req.body;
+    const newHours = new Hours({
+        day: dayName,
+        hours: hours
+    });
+    const results = await newHours.save();
+    res.json(results);
+});
+
+router.put('/api/edit/hours', login, async (req, res) => {
+    const { dayName, hours } = req.body;
+    const results = await Hours.findOneAndUpdate({ day: dayName }, { hours: hours }, {
+        new: true
+    });
+    res.json(results);
+});
+
+router.delete('/api/edit/hours', login, async (req, res) => {
+    const { dayName } = req.body;
+    const results = await Hours.findOneAndDelete({ day: dayName });
+    res.json(results);
+});
+
+router.post('/api/edit/holidays', login, async (req, res) => {
+    const { holidayName, holidayHours } = req.body;
+    const newHoliday = new Holidays({
+        day: holidayName,
+        hours: holidayHours
+    });
+    const results = await newHoliday.save();
+    res.json(results);
+});
+
+router.put('/api/edit/holidays', login, async (req, res) => {
+    const { holidayName, holidayHours } = req.body;
+    const results = await Holidays.findOneAndUpdate({ day: holidayName }, { hours: holidayHours }, {
+        new: true
+    });
+    res.json(results);
+});
+
+router.delete('/api/edit/holidays', login, async (req, res) => {
+    const { holidayName } = req.body;
+    const results = await Holidays.findOneAndDelete({ day: holidayName });
+    res.json(results);
+});
 
 module.exports = router;

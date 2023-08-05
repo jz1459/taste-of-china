@@ -15,7 +15,6 @@ const foodSchema = {
 const lunchSchema = {
     name: String,
     price: String,
-    category: String
 };
 
 const hoursSchema = {
