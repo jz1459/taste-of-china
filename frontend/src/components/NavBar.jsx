@@ -8,7 +8,7 @@ function NavBar() {
         // <Router>
         <Navbar expand="md">
             <Container>
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/">
                     <p>Taste of China</p>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">

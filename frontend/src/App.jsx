@@ -5,6 +5,9 @@ import Contact from "./pages/Contact";
 import Menu from "./pages/Menu";
 import Allday from "./components/Allday";
 import Lunch from "./components/Lunch";
+import Login from "./pages/Login";
+import Edit from "./pages/Edit";
+import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -18,7 +21,10 @@ function App() {
                     <Route exact path='/menu/allday' element={<Allday />} />
                     <Route exact path='/menu/lunch' element={<Lunch />} />
                     <Route exact path='/contact' element={<Contact />} />
+                    <Route exact path='/login' element={<Login />} />
+                    <Route exact path='/edit' element={<Edit />} />
                 </Routes>
+                <Footer />
             </div>
         </Router>
     );
