@@ -46,9 +46,29 @@ router.post('/api/login', async (req, res) => {
     }
 });
 
-// router.post('/api/edit', login, async (req, res) => {
+router.post('/api/edit/all-day', login, async (req, res) => {
+    const { foodName, foodPrice, foodCategory } = req.body;
+    const newFood = new Food({
+        name: foodName,
+        price: foodPrice,
+        category: foodCategory,
+        variants: []
+    });
+    const results = await newFood.save();
+    res.json(results);
+});
 
-// })
+router.put('/api/edit/all-day', login, async (req, res) => {
+    const { foodName, foodPrice } = req.body;
+    const results = await Food.findOneAndUpdate({ name: foodName }, { price: foodPrice });
+    res.json(results);
+});
+
+router.delete('/api/edit/all-day', login, async (req, res) => {
+    const { foodName } = req.body;
+    const results = await Food.findOneAndDelete({ name: foodName });
+    res.json(results);
+});
 
 
 router.post('/api/logout' )
