@@ -11,9 +11,14 @@ function Lunch() {
     }, []);
 
     const getItems = async () => {
-        const res = await axios.get(url);
-        setItems(res.data);
+        try {
+            const res = await axios.get(url);
+            setItems(res.data);
+        } catch (error) {
+            alert(error.response.data);
+        }
     };
+    console.log(items);
     return (
         <section className="lunch-menu">
             <Container>
@@ -21,19 +26,19 @@ function Lunch() {
                     <div className="sectionHeader">
                         <h1>Lunch Special</h1>
                     </div>
+                    <Row>
+                        {items.map(food =>
+                            <Col size={4} >
+                                <div className="foodName">
+                                    <h2>{food.name}</h2>
+                                </div>
+                                <div className="foodPrice">
+                                    <p>{food.price}</p>
+                                </div>
+                            </Col>
+                        )}
+                    </Row>
                 </div>
-                <Row>
-                    {items.map(item => {
-                        <Col size={4} >
-                            <div className="foodName">
-                                <h2>{item.name}</h2>
-                            </div>
-                            <div className="foodPrice">
-                                <p>{item.price}</p>
-                            </div>
-                        </Col>
-                    })}
-                </Row>
             </Container>
         </section>
     );

@@ -11,12 +11,16 @@ function Login() {
 
 
     const handleSubmit = async () => {
-        const res = await axios.post(loginUrl, { username: userName, password: password });
-        if (res.data.accessToken) {
-            localStorage.setItem("user", JSON.stringify(res.data))
+        try {
+            const res = await axios.post(loginUrl, { username: userName, password: password });
+            if (res.data.accessToken) {
+                localStorage.setItem("user", JSON.stringify(res.data))
+            }
+            navigate('/edit');
+        } catch (error) {
+            alert(error.response.data);
         }
-        navigate('/edit');
-    }
+    };
 
     return (
         <section className="login" id="login">

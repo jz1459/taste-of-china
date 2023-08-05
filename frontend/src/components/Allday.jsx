@@ -11,8 +11,12 @@ function Allday() {
     }, []);
 
     const getItems = async () => {
-        const res = await axios.get(url);
-        setItems(res.data);
+        try {
+            const res = await axios.get(url);
+            setItems(res.data);
+        } catch (error) {
+            alert(error.response.data);
+        }
     };
 
     const fillData = (tag) => {
