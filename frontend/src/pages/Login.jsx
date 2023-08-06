@@ -9,12 +9,19 @@ function Login() {
     const loginUrl = "http://localhost:4000/api/login";
     const navigate = useNavigate();
 
+    const setHtmlStorage = (name, value, expires) => {
+        const date = new Date();
+        const schedule = Math.round((date.setSeconds(date.getSeconds() + expires)) / 1000);
+        sessionStorage.setItem(name, value);
+        sessionStorage.setItem(name + '_time', schedule);
+    };
 
     const handleSubmit = async () => {
         try {
             const res = await axios.post(loginUrl, { username: userName, password: password });
             if (res.data.accessToken) {
-                localStorage.setItem("user", JSON.stringify(res.data))
+                // localStorage.setItem("user", JSON.stringify(res.data))
+                setHtmlStorage("user", JSON.stringify(res.data), 3600);
             }
             navigate('/edit');
         } catch (error) {

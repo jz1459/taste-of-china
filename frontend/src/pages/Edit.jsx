@@ -7,20 +7,32 @@ function Edit() {
     // Handle Authentication and Authorization
     const navigate = useNavigate();
 
+    const getHtmlStorage = (name) => {
+        const date = new Date();
+        const currentTime = Math.round(date / 1000);
+        const storedTime = window.sessionStorage.getItem(name + "_time");
+        if (storedTime < currentTime) {
+            sessionStorage.removeItem(name);
+            sessionStorage.removeItem(name + "_time");
+        }
+    }
+
     useEffect(() => {
-        const isLoggedIn = window.localStorage.getItem('user');
+        const isLoggedIn = window.sessionStorage.getItem('user');
         if (!isLoggedIn) {
             navigate('/login');
         }
-    }, []);
+        getHtmlStorage("user");
+    });
 
     const handleLogOut = () => {
-        localStorage.removeItem("user");
+        sessionStorage.removeItem("user");
+        sessionStorage.removeItem("user_time");
         navigate('/login');
     };
 
     const authHeader = () => {
-        const user = JSON.parse(localStorage.getItem('user'));
+        const user = JSON.parse(sessionStorage.getItem('user'));
         if (user && user.accessToken) {
             return { "Authorization": "Bearer " + user.accessToken };
         } else {
