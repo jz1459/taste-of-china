@@ -18,8 +18,8 @@ function App() {
                 <Routes>
                     <Route exact path='/' element={<Home />} />
                     <Route exact path='/menu' element={<Menu />} />
-                    <Route exact path='/menu/allday' element={<Allday />} />
-                    <Route exact path='/menu/lunch' element={<Lunch />} />
+                    <Route exact path='/menu-allday' element={<Allday />} />
+                    <Route exact path='/menu-lunch' element={<Lunch />} />
                     <Route exact path='/contact' element={<Contact />} />
                     <Route exact path='/login' element={<Login />} />
                     <Route exact path='/edit' element={<Edit />} />

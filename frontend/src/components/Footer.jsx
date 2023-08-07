@@ -4,7 +4,7 @@ function Footer() {
     return (
         <section className="footer" id="footer">
             <Container>
-                <p>&copy; Jason Zheng. All Rights Reserved</p>
+                <p>&copy; Taste of China. All Rights Reserved</p>
                 <a href="/login">Admin Use Only</a>
             </Container>
         </section>
