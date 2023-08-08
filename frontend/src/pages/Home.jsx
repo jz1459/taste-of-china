@@ -12,7 +12,9 @@ function Home() {
                     <h1>Welcome To Taste of China</h1>
                 </Row>
                 <Row>
-                    <p>Best Food, Great Value</p>
+                    <h2>Best Food, Great Value</h2>
+                    <p>103 West Ave, Saratoga Springs, NY 12866</p>
+                    <p>(518) 583-0909</p>
                 </Row>
                 <Row>
                     <span className="onlineMenu">

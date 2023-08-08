@@ -22,13 +22,16 @@ function Lunch() {
     return (
         <section className="lunch-menu">
             <Container>
+                <div className="section-header">
+                    <h1>Lunch Menu</h1>
+                </div>
                 <div className="lunch" id="lunch">
                     <div className="sectionHeader">
                         <h1>Lunch Special</h1>
                     </div>
                     <Row>
                         {items.map(food =>
-                            <Col size={4} >
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>

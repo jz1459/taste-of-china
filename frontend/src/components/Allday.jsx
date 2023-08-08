@@ -45,50 +45,47 @@ function Allday() {
 
     return (
         <section className="allday-menu">
-            <Navbar expand="md">
-                <Container>
-                    <Navbar.Brand href="/menu">
+            {/* <div className="menuNavigation" id = "menuNavigation">
+                <Navbar expand="md">
+                    <Navbar.Brand href="/menu-allday">
                         <p>All-day Menu</p>
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav">
-                        <span className="navbar-toggler-icon"></span>
-                    </Navbar.Toggle>
-                    {/* <Navbar.Collapse id="basic-navbar-nav"> */}
-                        <Nav className="ms-auto">
-                            <Nav.Link href="#appetizers" id='appetizersLink' className="navbar-link">Appetizers</Nav.Link>
-                            <Nav.Link href="#soup" id='soupLink' className="navbar-link">Soup</Nav.Link>
-                            <Nav.Link href="#friedRice" id='friedRiceLink' className="navbar-link">Fried Rice</Nav.Link>
-                            <Nav.Link href="chowMein" id='chowMeinLink' className="navbar-link">Chow Mein</Nav.Link>
-                            <Nav.Link href="#chopSuey" id='chopSueyLink' className="navbar-link">Chop Suey</Nav.Link>
-                            <Nav.Link href="#sweetAndSour" id='sweetAndSourLink' className="navbar-link">Sweet And Sour</Nav.Link>
-                            <Nav.Link href="#eggFooYoung" id='eggFooYoungLink' className="navbar-link">Egg Foo Young</Nav.Link>
-                            <Nav.Link href="#curry" id='curryLink' className="navbar-link">Curry</Nav.Link>
-                            <Nav.Link href="#loMein" id='loMeinLink' className="navbar-link">Lo Mein</Nav.Link>
-                            <Nav.Link href="#chowFun" id='chowFunLink' className="navbar-link">Chow Fun</Nav.Link>
-                            <Nav.Link href="#pork" id='porkLink' className="navbar-link">Pork</Nav.Link>
-                            <Nav.Link href="#chicken" id='chickenLink' className="navbar-link">Chicken</Nav.Link>
-                            <Nav.Link href="#beef" id='beefLink' className="navbar-link">Beef</Nav.Link>
-                            <Nav.Link href="#seafood" id='seafoodLink' className="navbar-link">Seafood</Nav.Link>
-                            <Nav.Link href="#specialRecs" id='specialRecsLink' className="navbar-link">Special Recommendations</Nav.Link>
-                            <Nav.Link href="#healthFood" id='healthFoodLink' className="navbar-link">Health Food Special</Nav.Link>
-                            <Nav.Link href="#chefsSpecial" id='chefsSpecialLink' className="navbar-link">Chef's Specials</Nav.Link>
-                            <Nav.Link href="#specialCombo" id='specialComboLink' className="navbar-link">Special Combination Plates</Nav.Link>
-                            <Nav.Link href="#sideOrder" id='sideOrderLink' className="navbar-link">Side Orders</Nav.Link>
-                        </Nav>
-                    {/* </Navbar.Collapse> */}
-                </Container>
-            </Navbar>
+                    <Nav className="ms-auto">
+                        <Nav.Link href="#appetizers" id='appetizersLink' className="navbar-link">Appetizers</Nav.Link>
+                        <Nav.Link href="#soup" id='soupLink' className="navbar-link">Soup</Nav.Link>
+                        <Nav.Link href="#friedRice" id='friedRiceLink' className="navbar-link">Fried Rice</Nav.Link>
+                        <Nav.Link href="#chowMein" id='chowMeinLink' className="navbar-link">Chow Mein</Nav.Link>
+                        <Nav.Link href="#chopSuey" id='chopSueyLink' className="navbar-link">Chop Suey</Nav.Link>
+                        <Nav.Link href="#sweetAndSour" id='sweetAndSourLink' className="navbar-link">Sweet And Sour</Nav.Link>
+                        <Nav.Link href="#eggFooYoung" id='eggFooYoungLink' className="navbar-link">Egg Foo Young</Nav.Link>
+                        <Nav.Link href="#curry" id='curryLink' className="navbar-link">Curry</Nav.Link>
+                        <Nav.Link href="#loMein" id='loMeinLink' className="navbar-link">Lo Mein</Nav.Link>
+                        <Nav.Link href="#chowFun" id='chowFunLink' className="navbar-link">Chow Fun</Nav.Link>
+                        <Nav.Link href="#pork" id='porkLink' className="navbar-link">Pork</Nav.Link>
+                        <Nav.Link href="#chicken" id='chickenLink' className="navbar-link">Chicken</Nav.Link>
+                        <Nav.Link href="#beef" id='beefLink' className="navbar-link">Beef</Nav.Link>
+                        <Nav.Link href="#seafood" id='seafoodLink' className="navbar-link">Seafood</Nav.Link>
+                        <Nav.Link href="#specialRecs" id='specialRecsLink' className="navbar-link">Special Recommendations</Nav.Link>
+                        <Nav.Link href="#healthFood" id='healthFoodLink' className="navbar-link">Health Food Special</Nav.Link>
+                        <Nav.Link href="#chefsSpecial" id='chefsSpecialLink' className="navbar-link">Chef's Specials</Nav.Link>
+                        <Nav.Link href="#specialCombo" id='specialComboLink' className="navbar-link">Special Combination Plates</Nav.Link>
+                        <Nav.Link href="#sideOrder" id='sideOrderLink' className="navbar-link">Side Orders</Nav.Link>
+                    </Nav>
+                </Navbar>
+            </div> */}
             <Container>
+                <div className="section-header">
+                    <h1>All-Day Menu</h1>
+                </div>
                 <div className="appetizers" id="appetizers">
                     <div className="sectionHeader">
                         <h1>Appetizers</h1>
                     </div>
                     <Row>
                         {Appetizers.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
-                                    {/* {console.log(Appetizers.name)} */}
                                 </div>
                                 <div className="foodPrice">
                                     <p>{food.price}</p>
@@ -100,10 +97,11 @@ function Allday() {
                 <div className="soup" id="soup">
                     <div className="sectionHeader">
                         <h1>Soups</h1>
+                        <p>With Crispy Noodles</p>
                     </div>
                     <Row>
                         {Soup.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -120,7 +118,7 @@ function Allday() {
                     </div>
                     <Row>
                         {FriedRice.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -137,7 +135,7 @@ function Allday() {
                     </div>
                     <Row>
                         {ChowMein.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -154,7 +152,7 @@ function Allday() {
                     </div>
                     <Row>
                         {ChopSuey.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -171,7 +169,7 @@ function Allday() {
                     </div>
                     <Row>
                         {SweetAndSour.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -188,7 +186,7 @@ function Allday() {
                     </div>
                     <Row>
                         {EggFooYoung.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -205,7 +203,7 @@ function Allday() {
                     </div>
                     <Row>
                         {Curry.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -222,7 +220,7 @@ function Allday() {
                     </div>
                     <Row>
                         {LoMein.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -239,7 +237,7 @@ function Allday() {
                     </div>
                     <Row>
                         {ChowFun.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -256,7 +254,7 @@ function Allday() {
                     </div>
                     <Row>
                         {Pork.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -273,7 +271,7 @@ function Allday() {
                     </div>
                     <Row>
                         {Chicken.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -290,7 +288,7 @@ function Allday() {
                     </div>
                     <Row>
                         {Beef.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -307,7 +305,7 @@ function Allday() {
                     </div>
                     <Row>
                         {Seafood.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -324,7 +322,7 @@ function Allday() {
                     </div>
                     <Row>
                         {SpecialRecs.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -341,7 +339,7 @@ function Allday() {
                     </div>
                     <Row>
                         {HealthFood.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -358,7 +356,7 @@ function Allday() {
                     </div>
                     <Row>
                         {ChefsSpecial.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -375,7 +373,7 @@ function Allday() {
                     </div>
                     <Row>
                         {SpecialCombo.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -392,7 +390,7 @@ function Allday() {
                     </div>
                     <Row>
                         {SideOrder.map(food =>
-                            <Col size={4}>
+                            <Col xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -403,6 +401,7 @@ function Allday() {
                         )}
                     </Row>
                 </div>
+                <div className="go-top"><a href="#menuNavigation"><i className="bi bi-arrow-up-circle-fill"></i></a></div>
             </Container>
         </section>
     );

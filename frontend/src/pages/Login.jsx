@@ -33,11 +33,13 @@ function Login() {
         <section className="login" id="login">
             <Container>
                 <Row>
-                    <h1>Login</h1>
+                    <div className="section-header">
+                        <h1>Admin Login</h1>
+                    </div>
                 </Row>
                 <Row>
                     <div className="userName">
-                        <input type="userName" name="userName" placeholder="Username"
+                        <input type="text" name="userName" placeholder="Username"
                             onChange={(event) => setUsername(event.target.value)} />
                     </div>
                     <div className="password">

@@ -40,8 +40,16 @@ body {
 }
 /* End of Default CSS */
 
+/* General Styles CSS */
+.section-header h1 {
+    font-size: 65px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-top: 5vh;
+}
+/* End of General Styles CSS */
 /* Navbar CSS */
-nav.navbar {
+.navigation nav.navbar {
     padding: 20px 0;
     position: fixed;
     width: 100%;
@@ -51,13 +59,12 @@ nav.navbar {
     background-color: #121212;
 }
 
-
-nav.navbar a.navbar-brand {
+.navigation nav.navbar a.navbar-brand {
     width: 15%;
     color: white;
 }
 
-nav.navbar .navbar-nav .nav-link.navbar-link {
+.navigation nav.navbar .navbar-nav .nav-link.navbar-link {
     font-weight: 400;
     color: #fff;
     letter-spacing: 0.8px;
@@ -67,18 +74,18 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
     background-color: #121212;
 }
 
-nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
-nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+.navigation nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+.navigation nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 1;
     color: #F06000;
 }
 
-span.navbar-text {
+.navigation span.navbar-text {
     display: flex;
     align-items: center;
 }
 
-.navbar-text button {
+.navigation .navbar-text button {
     font-weight: 700;
     color: #fff;
     border: 1px solid #fff;
@@ -90,11 +97,11 @@ span.navbar-text {
     transition: 0.3s ease-in-out;
 }
 
-.navbar-text button span {
+.navigation .navbar-text button span {
     z-index: 1;
 }
 
-.navbar-text button::before {
+.navigation .navbar-text button::before {
     content: "";
     width: 0%;
     height: 100%;
@@ -106,24 +113,24 @@ span.navbar-text {
     transition: 0.3s ease-in-out;
 }
 
-.navbar-text button:hover {
+.navigation .navbar-text button:hover {
     color: #121212;
 }
 
-.navbar-text button:hover::before {
+.navigation .navbar-text button:hover::before {
     content: "";
     width: 100%;
     height: 100%;
     position: absolute;
 }
 
-nav.navbar .navbar-toggler:active,
-nav.navbar .navbar-toggler:focus {
+.navigation nav.navbar .navbar-toggler:active,
+.navigation nav.navbar .navbar-toggler:focus {
     outline: none;
     box-shadow: none;
 }
 
-nav.navbar .navbar-toggler-icon {
+.navigation nav.navbar .navbar-toggler-icon {
     width: 24px;
     height: 17px;
     background-image: none;
@@ -133,12 +140,12 @@ nav.navbar .navbar-toggler-icon {
     top: -2px;
 }
 
-nav.navbar .navbar-toggler-icon:focus {
+.navigation nav.navbar .navbar-toggler-icon:focus {
     border-bottom: 2px solid #fff;
 }
 
-nav.navbar .navbar-toggler-icon:after,
-nav.navbar .navbar-toggler-icon:before {
+.navigation nav.navbar .navbar-toggler-icon:after,
+.navigation nav.navbar .navbar-toggler-icon:before {
     width: 24px;
     position: absolute;
     height: 2px;
@@ -148,6 +155,15 @@ nav.navbar .navbar-toggler-icon:before {
     content: '';
     z-index: 2;
     transition: all 300ms linear;
+}
+
+.navigation .sub-menu-content {
+    position: absolute;
+    display: none;
+}
+
+.navigation .sub-menu:hover .sub-menu-content {
+    display: block;
 }
 
 /* End of Navbar CSS */
@@ -164,13 +180,13 @@ nav.navbar .navbar-toggler-icon:before {
 
 .home .container {
     text-align: center;
-    height: 70vh;
+    height: 75vh;
     left: 0;
 }
     
 .home img {
     left: 0;
-    opacity: 0.75;
+    opacity: 0.65;
     position: absolute;
     right: 0;
     z-index: -1;
@@ -192,10 +208,16 @@ nav.navbar .navbar-toggler-icon:before {
     display: block;
 }
 
-.home p {
+.home h2 {
     font-size: 30px;
     font-weight: 500;
-    margin-top: 5vh;
+    display: block;
+    margin-bottom: 3vh;
+}
+
+.home p {
+    font-size: 25px;
+    font-weight: 500;
     display: block;
 }
 
@@ -240,14 +262,453 @@ nav.navbar .navbar-toggler-icon:before {
 
 /* End of Home Page CSS */
 
+/* Contact Us CSS */
+.contact {
+    margin-top: -50px;
+    position: relative;
+    padding-top: 15vh;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #303030;
+}
+
+.contact .container {
+    /* text-align: center; */
+    height: 75vh;
+    left: 0;
+}
+
+.contact h1 {
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.contact h3 {
+    color: #F06000;
+}
+
+.contact .contact-header {
+    color: #F06000;
+}
+/* End of Contact Us CSS */
+
+/* Login Page CSS */
+.login {
+    margin-top: -50px;
+    position: relative;
+    padding-top: 15vh;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #303030;
+}
+
+.login .container {
+    text-align: center;
+    height: 75vh;
+    left: 0;
+}
+
+.login h1 {
+    margin-bottom: 20px;
+}
+
+.login .userName input, 
+.login .password input{
+    position: relative;
+    height: 50px;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    font-weight: 200;
+    width: 30vw;
+    border-bottom: 1px solid rgba(200, 196, 196, 0.241);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.login .loginButton button {
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 18px 34px;
+    font-size: 18px;
+    position: relative;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: 5vh;
+}
+
+.login .loginButton button::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    color: black;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+
+.login .loginButton button:hover {
+    color: #F06000
+}
+
+.login .loginButton button:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* End of Login Page CSS */
+
+/* Edit CSS */
+.edit {
+    margin-top: -50px;
+    position: relative;
+    padding-top: 15vh;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #303030;
+}
+
+.edit .container {
+    height: 75vh;
+    left: 0;
+}
+
+.edit .logoutButton button {
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 18px 34px;
+    font-size: 18px;
+    position: relative;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: 5vh;
+}
+
+.edit .logoutButton button::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+
+.edit .logoutButton button:hover {
+    color: #F06000;
+}
+
+.edit .logoutButton button:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.edit .editHeader h1 {
+    font-size: 25px;
+    color: #F06000;
+}
+
+.edit .editHeader input{
+    position: relative;
+    height: 5vh;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 10vw;
+    border-bottom: 1px solid rgba(200, 196, 196, 0.241);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.edit .editHeader button {
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 10px;
+    font-size: 15px;
+    position: relative;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.edit .editHeader button::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+
+.edit .editHeader button:hover {
+    color: #F06000;
+}
+
+.edit .editHeader button:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* End of Edit CSS */
+
+/* Menu CSS */
+.menu {
+    margin-top: -50px;
+    position: relative;
+    padding-top: 15vh;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #303030;
+}
+
+.menu .container {
+    text-align: center;
+    height: 70vh;
+    left: 0;
+}
+
+.menu h1 {
+    margin-bottom: 20px;
+}
+
+.menu p {
+    position: absolute;
+    bottom: 0;
+    margin-left: 2;
+}
+
+.menu .menu-navbar {
+    margin-top: 20vh;
+}
+
+.menu .menu-navbar h1 {
+    margin-bottom: 5vh;
+}
+
+.menu .menu-navbar a {
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 18px 34px;
+    font-size: 18px;
+    position: relative;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    width: 20vw;
+}
+
+.menu .menu-navbar a::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+
+.menu .menu-navbar a:hover {
+    color: #F06000;
+}
+
+.menu .menu-navbar a:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+/* End of Menu CSS */
+
+/* All-day Menu CSS */
+.allday-menu {
+    margin-top: -50px;
+    position: relative;
+    padding-top: 15vh;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #303030;
+}
+
+.allday-menu .container {
+    /* height: 70vh; */
+    left: 0;
+    margin-top: 125px;
+}
+
+.allday-menu .section-header h1 {
+    text-align: center;
+}
+
+.allday-menu .sectionHeader h1{
+    font-size: 35px;
+    color: aqua;
+    font-weight: 700;
+}
+
+.allday-menu .sectionHeader p{
+    font-size: 20px;
+    color: aqua;
+    font-weight: 500;
+}
+
+.allday-menu .foodName h2{
+    font-size: 20px;
+}
+
+.allday-menu .foodPrice p {
+    font-size: 17px;
+    color: #F06000;
+}
+
+/* .allday-menu nav.navbar {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 100px;
+    z-index: 2;
+    transition: 0.32s ease-in-out;
+    background-color: #303030;
+}
+
+.allday-menu nav.navbar a.navbar-brand {
+    width: 10%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.allday-menu nav.navbar .navbar-nav .nav-link.navbar-link {
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.8px;
+    padding: 10px 20px;
+    font-size: 18px;
+    opacity: 1;
+    background-color: #303030;
+}
+
+.allday-menu nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+.allday-menu nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+    opacity: 1;
+    color: #F06000;
+}
+
+.allday-menu .ms-auto {
+    overflow: auto;
+    white-space: nowrap;
+} */
+
+.allday-menu .go-top a {
+        position: relative;
+        left: 50%;
+        /* margin-left: -29px; */
+        color: #fff;
+        display: block;
+        height: 42px;
+        width: 42px;
+        font-size: 42px;
+        line-height: 42px;
+        border-radius: 100%;
+        /* margin-top: -10px; */
+}
+
+.allday-menu .go-top a:hover {
+    color: #F06000;
+    transition: 0.3s ease-in-out;
+}
+
+/* End of All-day Menu CSS */
+
+/* Lunch Menu CSS */
+.lunch-menu {
+    margin-top: -50px;
+    position: relative;
+    padding-top: 15vh;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #303030;
+}
+
+.lunch-menu .container {
+    height: 70vh;
+    left: 0;
+    margin-top: 125px;
+}
+
+.lunch-menu .section-header h1 {
+    text-align: center;
+}
+
+.lunch-menu .sectionHeader h1 {
+    font-size: 35px;
+    color: aqua;
+    font-weight: 700;
+}
+
+.lunch-menu .sectionHeader p {
+    font-size: 20px;
+    color: aqua;
+    font-weight: 500;
+}
+
+.lunch-menu .foodName h2 {
+    font-size: 20px;
+}
+
+.lunch-menu .foodPrice p {
+    font-size: 17px;
+    color: #F06000;
+}
+
+/* End of Lunch Menu CSS */
+
 /* Footer CSS */
 .footer {
-    padding-top: 5vh;
-    margin-bottom: 48px;
+    bottom: 0;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
     color: #303030;
     font-size: 14px;
     text-align: center;
     position: relative;
+    background-color: #121212;
 }
 
 .footer p {
@@ -261,15 +722,3 @@ nav.navbar .navbar-toggler-icon:before {
 }
 
 /* End of Footer CSS */
-.ms-auto {
-    overflow: auto;
-    white-space: nowrap;
-}
-
-.sub-menu-content{
-    position: absolute;
-    display: none;
-}
-.sub-menu:hover .sub-menu-content{
-    display:block;
-}
