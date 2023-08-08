@@ -3,7 +3,7 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const login = require('../middleware/login');
 
-const { Food, Size, Lunch, Hours, Holidays, Users } = require("../models/schema");
+const { Food, Lunch, Hours, Holidays, Users } = require("../models/schema");
 
 // Routes available to everyone
 router.get('/api/allday', async (req, res) => {
@@ -51,8 +51,7 @@ router.post('/api/edit/all-day', login, async (req, res) => {
     const newFood = new Food({
         name: foodName,
         price: foodPrice,
-        category: foodCategory,
-        variants: []
+        category: foodCategory
     });
     const results = await newFood.save();
     res.json(results);
@@ -76,8 +75,7 @@ router.post('/api/edit/lunch', login, async (req, res) => {
     const { lunchName, lunchPrice } = req.body;
     const newLunch = new Lunch({
         name: lunchName,
-        price: lunchPrice,
-        variants: []
+        price: lunchPrice
     });
     const results = await newLunch.save();
     res.json(results);

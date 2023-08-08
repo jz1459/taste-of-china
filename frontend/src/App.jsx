@@ -8,7 +8,7 @@ import Lunch from "./components/Lunch";
 import Login from "./pages/Login";
 import Edit from "./pages/Edit";
 import Footer from "./components/Footer";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
     return (
@@ -16,13 +16,14 @@ function App() {
             <div className="App">
                 <NavBar />
                 <Routes>
-                    <Route exact path='/' element={<Home />} />
-                    <Route exact path='/menu' element={<Menu />} />
-                    <Route exact path='/menu-allday' element={<Allday />} />
-                    <Route exact path='/menu-lunch' element={<Lunch />} />
-                    <Route exact path='/contact' element={<Contact />} />
-                    <Route exact path='/login' element={<Login />} />
-                    <Route exact path='/edit' element={<Edit />} />
+                    <Route path='/' element={<Home />} />
+                    <Route path='/menu' element={<Menu />} />
+                    <Route path='/menu-allday' element={<Allday />} />
+                    <Route path='/menu-lunch' element={<Lunch />} />
+                    <Route path='/contact' element={<Contact />} />
+                    <Route path='/login' element={<Login />} />
+                    <Route path='/edit' element={<Edit />} />
+                    <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
                 <Footer />
             </div>
