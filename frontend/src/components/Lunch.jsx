@@ -21,6 +21,7 @@ function Lunch() {
     console.log(items);
     return (
         <section className="lunch-menu">
+            <div className="lunch-top" id="lunch-top"></div>
             <Container>
                 <div className="section-header">
                     <h1>Lunch Menu</h1>
@@ -44,6 +45,7 @@ function Lunch() {
                         )}
                     </Row>
                 </div>
+                <div className="go-top"><a href="#lunch-top"><i className="bi bi-arrow-up-circle-fill"></i></a></div>
             </Container>
         </section>
     );

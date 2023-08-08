@@ -73,6 +73,7 @@ function Allday() {
                     </Nav>
                 </Navbar>
             </div> */}
+            <div className="all-day-top" id="all-day-top"></div>
             <Container>
                 <div className="section-header" id = "all-dayHeader">
                     <h1>All-Day Menu</h1>
@@ -415,7 +416,7 @@ function Allday() {
                         )}
                     </Row>
                 </div>
-                <div className="go-top"><a href="#all-dayHeader"><i className="bi bi-arrow-up-circle-fill"></i></a></div>
+                <div className="go-top"><a href="#all-day-top"><i className="bi bi-arrow-up-circle-fill"></i></a></div>
             </Container>
         </section>
     );

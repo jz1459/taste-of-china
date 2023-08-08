@@ -34,7 +34,7 @@ body {
     font-weight: 400;
     overflow-x: hidden;
     position: relative;
-    background-color: #121212 !important;
+    background-color: #303030 !important;
     color: #fff !important;
     font-family: 'Centra', sans-serif !important;
 }
@@ -56,12 +56,15 @@ body {
     top: 0;
     z-index: 9999;
     transition: 0.32s ease-in-out;
-    background-color: #121212;
+    background-color: #2d81ff;
+    border-bottom: #fff solid ;
 }
 
 .navigation nav.navbar a.navbar-brand {
     width: 15%;
     color: white;
+    font-size: 30px;
+    margin-top: 10px;
 }
 
 .navigation nav.navbar .navbar-nav .nav-link.navbar-link {
@@ -69,9 +72,9 @@ body {
     color: #fff;
     letter-spacing: 0.8px;
     padding: 0 25px;
-    font-size: 18px;
+    font-size: 20px;
     opacity: 1;
-    background-color: #121212;
+    background-color: #2d81ff;
 }
 
 .navigation nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
@@ -170,7 +173,7 @@ body {
 
 /* Home Page CSS */
 .home {
-    margin-top: -50px;
+    margin-top: -75px;
     position: relative;
     padding-top: 15vh;
     background-position: top center;
@@ -180,49 +183,56 @@ body {
 
 .home .container {
     text-align: center;
-    height: 75vh;
+    height: 77vh;
     left: 0;
 }
     
 .home img {
     left: 0;
-    opacity: 0.65;
+    opacity: 1;
     position: absolute;
     right: 0;
     z-index: -1;
 }
 
 .home .backgroundImg {
-    height: 75vh;
-    width: 100vw;
+    height: 80vh;
+    width: 100%;
     object-fit: cover;
 }
 
 .home h1 {
     font-size: 65px;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.8px;
     line-height: 1;
     margin-bottom: 20px;
-    margin-top: 25vh;
+    margin-top: 20vh;
     display: block;
+    text-shadow: 0 0 3px #121212, 0 0 3px #121212;
 }
 
 .home h2 {
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 600;
     display: block;
     margin-bottom: 3vh;
+    text-shadow: 0 0 3px #121212, 0 0 3px #121212;
 }
 
 .home p {
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 600;
     display: block;
+    text-shadow: 0 0 3px #121212, 0 0 3px #121212;
+}
+
+.home .home-info {
+    margin-top: 15vh;
 }
 
 .home .onlineMenu {
-    margin-top: 15vh;
+    margin-top: 10vh;
 }
 
 .home .onlineMenu a {
@@ -233,8 +243,9 @@ body {
     font-size: 18px;
     position: relative;
     background-color: transparent ;
-    transition: 0.3s ease-in-out;
+    /* transition: 0.3s ease-in-out; */
     text-decoration: none;
+    text-shadow: 0 0 3px #121212, 0 0 3px #121212;
 }
 
 .home .onlineMenu a::before {
@@ -251,6 +262,7 @@ body {
 
 .home .onlineMenu a:hover {
     color: #121212;
+    text-shadow: none;
 }
 
 .home .onlineMenu a:hover::before {
@@ -294,6 +306,10 @@ body {
 
 .contact .contact-header {
     color: #F06000;
+}
+
+.contact .contact-map {
+    margin-top: 5vh;
 }
 /* End of Contact Us CSS */
 
@@ -572,6 +588,10 @@ body {
     margin-top: 125px;
 }
 
+.allday-menu .sectionHeader {
+    margin: 3vh 0px;
+}
+
 .allday-menu .section-header h1 {
     text-align: center;
 }
@@ -674,6 +694,10 @@ body {
     margin-top: 125px;
 }
 
+.lunch-menu .sectionHeader {
+    margin: 3vh 0px;
+}
+
 .lunch-menu .section-header h1 {
     text-align: center;
 }
@@ -704,6 +728,25 @@ body {
     color: #F06000;
 }
 
+.lunch-menu .go-top a {
+    position: relative;
+    left: 50%;
+    /* margin-left: -29px; */
+    color: #fff;
+    display: block;
+    height: 42px;
+    width: 42px;
+    font-size: 42px;
+    line-height: 42px;
+    border-radius: 100%;
+    /* margin-top: -10px; */
+}
+
+.lunch-menu .go-top a:hover {
+    color: #F06000;
+    transition: 0.3s ease-in-out;
+}
+
 /* End of Lunch Menu CSS */
 
 /* Footer CSS */
@@ -715,7 +758,7 @@ body {
     font-size: 14px;
     text-align: center;
     position: relative;
-    background-color: #121212;
+    background-color: #303030;
 }
 
 .footer p {

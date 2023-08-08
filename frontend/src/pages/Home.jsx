@@ -7,14 +7,16 @@ function Home() {
     return (
         <section className="home" id="home">
             <Container>
-                <img className="backgroundImg" src={ChineseFood} alt = "Chinese Food"/>
+                <img className="backgroundImg" src={ChineseFood} alt="Chinese Food" />
                 <Row>
                     <h1>Welcome To Taste of China</h1>
                 </Row>
                 <Row>
                     <h2>Best Food, Great Value</h2>
-                    <p>103 West Ave, Saratoga Springs, NY 12866</p>
-                    <p>(518) 583-0909</p>
+                    <div className="home-info">
+                        <p>103 West Ave, Saratoga Springs, NY 12866</p>
+                        <p>(518) 583-0909</p>
+                    </div>
                 </Row>
                 <Row>
                     <span className="onlineMenu">
