@@ -284,12 +284,12 @@ function Edit() {
                 <div className="editHeader">
                     <h1>Edit All-day Menu</h1>
                     <Row>
-                        <Col>
+                        <Col sm={12} lg={6}>
                             <input type="text" placeholder="Food Name" value={foodName} onChange={(event) => setFoodName(event.target.value)} />
                             <input type="text" placeholder="Food Price" value={foodPrice} onChange={(event) => setFoodPrice(event.target.value)} />
                             <input type="text" placeholder="Food Category" value={foodCategory} onChange={(event) => setFoodCategory(event.target.value)} />
                         </Col>
-                        <Col>
+                        <Col sm={12} lg={6}>
                             <button onClick={() => createFood(foodName, foodPrice, foodCategory)}>Create New Food</button>
                             <button onClick={() => updateFood(foodName, foodPrice, foodCategory)}>Update Food Price</button>
                             <button onClick={() => deleteFood(foodName, foodCategory)}>Delete Food</button>
@@ -299,11 +299,11 @@ function Edit() {
                 <div className="editHeader">
                     <h1>Edit Lunch Menu</h1>
                     <Row>
-                        <Col>
+                        <Col sm={12} lg={6}>
                             <input type="text" placeholder="Food Name" value={lunchName} onChange={(event) => setLunchName(event.target.value)} />
                             <input type="text" placeholder="Food Price" value={lunchPrice} onChange={(event) => setLunchPrice(event.target.value)} />
                         </Col>
-                        <Col>
+                        <Col sm={12} lg={6}>
                             <button onClick={() => createLunch(lunchName, lunchPrice)}>Create New Food</button>
                             <button onClick={() => updateLunch(lunchName, lunchPrice)}>Update Food Price</button>
                             <button onClick={() => deleteLunch(lunchName)}>Delete Food</button>
@@ -313,11 +313,11 @@ function Edit() {
                 <div className="editHeader">
                     <h1>Edit Hours</h1>
                     <Row>
-                        <Col>
+                        <Col sm={12} lg={6}>
                             <input type="text" placeholder="Day" value={dayName} onChange={(event) => setDayName(event.target.value)} />
                             <input type="text" placeholder="Time" value={hours} onChange={(event) => setHours(event.target.value)} />
                         </Col>
-                        <Col>
+                        <Col sm={12} lg={6}>
                             <button onClick={() => createHours(dayName, hours)}>Add New Times</button>
                             <button onClick={() => updateHours(dayName, hours)}>Update Times</button>
                             <button onClick={() => deleteHours(dayName)}>Delete Times</button>
@@ -327,11 +327,11 @@ function Edit() {
                 <div className="editHeader">
                     <h1>Edit Holidays</h1>
                     <Row>
-                        <Col>
+                        <Col sm={12} lg={6}>
                             <input type="text" placeholder="Holiday" value={holidayName} onChange={(event) => setHolidayName(event.target.value)} />
                             <input type="text" placeholder="Time" value={holidayHours} onChange={(event) => setHolidayHours(event.target.value)} />
                         </Col>
-                        <Col>
+                        <Col sm={12} lg={6}>
                             <button onClick={() => createHoliday(holidayName, holidayHours)}>Add New Holiday</button>
                             <button onClick={() => updateHoliday(holidayName, holidayHours)}>Update Holiday</button>
                             <button onClick={() => deleteHoliday(holidayName)}>Delete Holiday</button>

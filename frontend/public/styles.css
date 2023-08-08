@@ -47,6 +47,21 @@ body {
     letter-spacing: 0.8px;
     margin-top: 5vh;
 }
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .section-header h1 {
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px){
+    .section-header h1 {
+        font-size: 45px;
+    }
+}
+
+
+
 /* End of General Styles CSS */
 /* Navbar CSS */
 .navigation nav.navbar {
@@ -169,6 +184,38 @@ body {
     display: block;
 }
 
+@media (min-width: 300px) and (max-width: 480px) {
+    .navigation nav.navbar {
+        padding: 20px 0;
+    }
+
+    .navigation nav.navbar .navbar-collapse {
+        margin: 5px 0;
+    }
+
+    .navigation nav.navbar .navbar-collapse .nav-link.navbar-link {
+        margin: 5px 0;
+    }
+
+    .navigation nav.navbar a.navbar-brand {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) { 
+    .navigation nav.navbar a.navbar-brand {
+        font-size: 25px;
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navigation nav.navbar a.navbar-brand {
+        font-size: 25px;
+        margin-top: 15px;
+    }
+}
+
 /* End of Navbar CSS */
 
 /* Home Page CSS */
@@ -272,6 +319,78 @@ body {
     position: absolute;
 }
 
+@media (min-width: 300px) and (max-width: 480px) {
+    .home h1 {
+        font-size: 40px;
+    }
+
+    .home h2 {
+        font-size: 20px;
+    }
+
+    .home p {
+        font-size: 15px;
+    }
+
+    .home .onlineMenu a {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .home h1 {
+        font-size: 45px;
+    }
+
+    .home h2{
+        font-size: 25px;
+    }
+
+    .home p {
+        font-size: 20px;
+    }
+
+    .home .onlineMenu {
+        margin-top: 5vh;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .home h1 {
+        font-size: 45px;
+    }
+
+    .home h2 {
+        font-size: 25px;
+    }
+
+    .home p {
+        font-size: 20px;
+    }
+
+    .home .onlineMenu {
+        margin-top: 5vh;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+    .home h1 {
+        font-size: 50px;
+    }
+
+    .home h2 {
+        font-size: 30px;
+    }
+
+    .home p {
+        font-size: 25px;
+    }
+
+    .home .onlineMenu {
+        margin-top: 5vh;
+    }
+}
+
 /* End of Home Page CSS */
 
 /* Contact Us CSS */
@@ -311,6 +430,22 @@ body {
 .contact .contact-map {
     margin-top: 5vh;
 }
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .contact h1 {
+        font-size: 35px;
+    }
+
+    .contact h2 {
+        font-size: 15px;
+    }
+
+    .contact li {
+        font-size: 15px;
+    }
+}
+
+
 /* End of Contact Us CSS */
 
 /* Login Page CSS */
@@ -386,6 +521,22 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
+}
+
+@media (min-width: 300px) and (max-width: 1024px) {
+    .login h1 {
+        font-size: 35px;
+    }
+
+    .login .userName input,
+    .login .password input {
+        font-size: 15px;
+        width: 40vw;
+    }
+
+    .login .loginButton button {
+        font-size: 15px;
+    }
 }
 
 /* End of Login Page CSS */
@@ -497,6 +648,89 @@ body {
     position: absolute;
 }
 
+@media (min-width: 300px) and (max-width: 480px) {
+    .edit .container {
+        height: fit-content;
+    }
+    .edit .editHeader h1 {
+        font-size: 20px;
+    }
+    
+    .edit .logoutButton button {
+        font-size: 15px;
+        
+    }
+
+    .edit .editHeader input {
+        font-size: 10px;
+        width: 30vw;
+    }
+
+    .edit .editHeader button {
+        font-size: 10px;
+    }
+
+    .edit .editHeader {
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+    .edit .container {
+        height: fit-content;
+    }
+
+    .edit .editHeader h1 {
+        font-size: 20px;
+    }
+
+    .edit .logoutButton button {
+        font-size: 15px;
+
+    }
+
+    .edit .editHeader input {
+        font-size: 15px;
+        width: 25vw;
+    }
+
+    .edit .editHeader button {
+        font-size: 15px;
+    }
+
+    .edit .editHeader {
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1500px) {
+    .edit .container {
+        height: fit-content;
+    }
+
+    .edit .editHeader h1 {
+        font-size: 20px;
+    }
+
+    .edit .logoutButton button {
+        font-size: 15px;
+
+    }
+
+    .edit .editHeader input {
+        font-size: 15px;
+        width: 25vw;
+    }
+
+    .edit .editHeader button {
+        font-size: 15px;
+    }
+
+    .edit .editHeader {
+        margin-bottom: 15px;
+    }
+}
+
 /* End of Edit CSS */
 
 /* Menu CSS */
@@ -568,6 +802,16 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
+}
+
+@media (min-width: 300px) and (max-width: 480px) {
+    .menu p {
+        font-size: 10px;
+    }
+
+    .menu .menu-navbar a {
+        font-size: 15px;
+    }
 }
 /* End of Menu CSS */
 
@@ -675,6 +919,57 @@ body {
     transition: 0.3s ease-in-out;
 }
 
+@media (min-width: 300px) and (max-width: 576px) {
+    .allday-menu .sectionHeader h1 {
+        font-size: 20px;
+    }
+
+    .allday-menu .sectionHeader p {
+        font-size: 15px;
+    }
+
+    .allday-menu .foodName h2 {
+        font-size: 12px;
+    }
+
+    .allday-menu .foodPrice p {
+        font-size: 10px;
+    }
+
+    .allday-menu .go-top a {
+        margin-left: -15px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 1024px) {
+    .allday-menu .sectionHeader h1 {
+        font-size: 25px;
+    }
+
+    .allday-menu .sectionHeader p {
+        font-size: 20px;
+    }
+
+    .allday-menu .foodName h2 {
+        font-size: 15px;
+    }
+
+    .allday-menu .foodPrice p {
+        font-size: 12px;
+    }
+
+    .allday-menu .go-top a {
+        margin-left: -20px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    .allday-menu .go-top a {
+        margin-left: -25px;
+    }
+}
+
+
 /* End of All-day Menu CSS */
 
 /* Lunch Menu CSS */
@@ -747,6 +1042,56 @@ body {
     transition: 0.3s ease-in-out;
 }
 
+@media (min-width: 300px) and (max-width: 576px) {
+    .lunch-menu .sectionHeader h1 {
+        font-size: 20px;
+    }
+
+    .lunch-menu .sectionHeader p {
+        font-size: 15px;
+    }
+
+    .lunch-menu .foodName h2 {
+        font-size: 12px;
+    }
+
+    .lunch-menu .foodPrice p {
+        font-size: 10px;
+    }
+
+    .lunch-menu .go-top a {
+        margin-left: -15px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 1024px) {
+    .lunch-menu .sectionHeader h1 {
+        font-size: 25px;
+    }
+
+    .lunch-menu .sectionHeader p {
+        font-size: 20px;
+    }
+
+    .lunch-menu .foodName h2 {
+        font-size: 15px;
+    }
+
+    .lunch-menu .foodPrice p {
+        font-size: 12px;
+    }
+
+    .lunch-menu .go-top a {
+        margin-left: -20px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    .lunch-menu .go-top a {
+        margin-left: -25px;
+    }
+}
+
 /* End of Lunch Menu CSS */
 
 /* Footer CSS */
@@ -769,6 +1114,28 @@ body {
     margin-top: 30px;
     align-items: center;
     justify-content: center;
+}
+
+@media (min-width: 300px) and (max-width: 480px) {
+    .footer p {
+        font-size: 10px;
+        margin-bottom: 0px;
+    }
+
+    .footer a {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .footer p {
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+
+    .footer a {
+        font-size: 10px;
+    }
 }
 
 /* End of Footer CSS */

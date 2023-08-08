@@ -84,7 +84,7 @@ function Allday() {
                     </div>
                     <Row>
                         {Appetizers.map(food =>
-                            <Col xl={4}>
+                            <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -102,7 +102,7 @@ function Allday() {
                     </div>
                     <Row>
                         {Soup.map(food =>
-                            <Col xl={4}>
+                            <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -119,7 +119,7 @@ function Allday() {
                     </div>
                     <Row>
                         {FriedRice.map(food =>
-                            <Col xl={4}>
+                            <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -137,7 +137,7 @@ function Allday() {
                     </div>
                     <Row>
                         {ChowMein.map(food =>
-                            <Col xl={4}>
+                           <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -155,7 +155,7 @@ function Allday() {
                     </div>
                     <Row>
                         {ChopSuey.map(food =>
-                            <Col xl={4}>
+                           <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -173,7 +173,7 @@ function Allday() {
                     </div>
                     <Row>
                         {SweetAndSour.map(food =>
-                            <Col xl={4}>
+                           <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -191,7 +191,7 @@ function Allday() {
                     </div>
                     <Row>
                         {EggFooYoung.map(food =>
-                            <Col xl={4}>
+                           <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -209,7 +209,7 @@ function Allday() {
                     </div>
                     <Row>
                         {Curry.map(food =>
-                            <Col xl={4}>
+                            <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -227,7 +227,7 @@ function Allday() {
                     </div>
                     <Row>
                         {LoMein.map(food =>
-                            <Col xl={4}>
+                            <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -245,7 +245,7 @@ function Allday() {
                     </div>
                     <Row>
                         {ChowFun.map(food =>
-                            <Col xl={4}>
+                            <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -263,7 +263,7 @@ function Allday() {
                     </div>
                     <Row>
                         {Pork.map(food =>
-                            <Col xl={4}>
+                           <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -281,7 +281,7 @@ function Allday() {
                     </div>
                     <Row>
                         {Chicken.map(food =>
-                            <Col xl={4}>
+                            <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -299,7 +299,7 @@ function Allday() {
                     </div>
                     <Row>
                         {Beef.map(food =>
-                            <Col xl={4}>
+                            <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -317,7 +317,7 @@ function Allday() {
                     </div>
                     <Row>
                         {Seafood.map(food =>
-                            <Col xl={4}>
+                            <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -335,7 +335,7 @@ function Allday() {
                     </div>
                     <Row>
                         {SpecialRecs.map(food =>
-                            <Col xl={4}>
+                            <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -352,7 +352,7 @@ function Allday() {
                     </div>
                     <Row>
                         {HealthFood.map(food =>
-                            <Col xl={4}>
+                            <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -370,7 +370,7 @@ function Allday() {
                     </div>
                     <Row>
                         {ChefsSpecial.map(food =>
-                            <Col xl={4}>
+                            <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -388,7 +388,7 @@ function Allday() {
                     </div>
                     <Row>
                         {SpecialCombo.map(food =>
-                            <Col xl={4}>
+                            <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
@@ -405,7 +405,7 @@ function Allday() {
                     </div>
                     <Row>
                         {SideOrder.map(food =>
-                            <Col xl={4}>
+                           <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>

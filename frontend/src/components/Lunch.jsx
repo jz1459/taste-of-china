@@ -34,7 +34,7 @@ function Lunch() {
                     </div>
                     <Row>
                         {items.map(food =>
-                            <Col xl={4}>
+                            <Col xs={6} sm={6} xl={4}>
                                 <div className="foodName">
                                     <h2>{food.name}</h2>
                                 </div>
