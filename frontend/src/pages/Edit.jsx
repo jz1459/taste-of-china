@@ -75,9 +75,9 @@ function Edit() {
         }
     };
 
-    const updateFood = async (foodName, foodPrice) => {
+    const updateFood = async (foodName, foodPrice, foodCategory) => {
         try {
-            const res = await axios.put(foodUrl, { foodName, foodPrice }, { headers: authHeader() });
+            const res = await axios.put(foodUrl, { foodName, foodPrice, foodCategory }, { headers: authHeader() });
             setFoodName("");
             setFoodPrice("");
             setFoodCategory("");
@@ -94,9 +94,9 @@ function Edit() {
         }
     };
 
-    const deleteFood = async (foodName) => {
+    const deleteFood = async (foodName, foodCategory) => {
         try {
-            const res = await axios.delete(foodUrl, { data: { foodName }, headers: authHeader() });
+            const res = await axios.delete(foodUrl, { data: { foodName, foodCategory }, headers: authHeader() });
             setFoodName("");
             setFoodPrice("");
             setFoodCategory("");
@@ -291,8 +291,8 @@ function Edit() {
                         </Col>
                         <Col>
                             <button onClick={() => createFood(foodName, foodPrice, foodCategory)}>Create New Food</button>
-                            <button onClick={() => updateFood(foodName, foodPrice)}>Update Food Price</button>
-                            <button onClick={() => deleteFood(foodName)}>Delete Food</button>
+                            <button onClick={() => updateFood(foodName, foodPrice, foodCategory)}>Update Food Price</button>
+                            <button onClick={() => deleteFood(foodName, foodCategory)}>Delete Food</button>
                         </Col>
                     </Row>
                 </div>

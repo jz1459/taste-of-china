@@ -24,10 +24,12 @@ function Lunch() {
             <Container>
                 <div className="section-header">
                     <h1>Lunch Menu</h1>
+                    <p>From 11:00 AM - 3:00 PM (Monday - Saturday)</p>
                 </div>
                 <div className="lunch" id="lunch">
                     <div className="sectionHeader">
                         <h1>Lunch Special</h1>
+                        <p>Served with Roast Pork Fried Rice and Your Choice of Wonton Soup, Egg Drop Soup, Egg Roll, Spring Roll, or Soda</p>
                     </div>
                     <Row>
                         {items.map(food =>

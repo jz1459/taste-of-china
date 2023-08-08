@@ -58,16 +58,16 @@ router.post('/api/edit/all-day', login, async (req, res) => {
 });
 
 router.put('/api/edit/all-day', login, async (req, res) => {
-    const { foodName, foodPrice } = req.body;
-    const results = await Food.findOneAndUpdate({ name: foodName }, { price: foodPrice }, {
+    const { foodName, foodPrice, foodCategory } = req.body;
+    const results = await Food.findOneAndUpdate({ name: foodName, category: foodCategory }, { price: foodPrice }, {
         new: true
     });
     res.json(results);
 });
 
 router.delete('/api/edit/all-day', login, async (req, res) => {
-    const { foodName } = req.body;
-    const results = await Food.findOneAndDelete({ name: foodName });
+    const { foodName, foodCategory } = req.body;
+    const results = await Food.findOneAndDelete({ name: foodName, category: foodCategory });
     res.json(results);
 });
 

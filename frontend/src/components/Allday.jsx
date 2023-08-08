@@ -74,7 +74,7 @@ function Allday() {
                 </Navbar>
             </div> */}
             <Container>
-                <div className="section-header">
+                <div className="section-header" id = "all-dayHeader">
                     <h1>All-Day Menu</h1>
                 </div>
                 <div className="appetizers" id="appetizers">
@@ -132,6 +132,7 @@ function Allday() {
                 <div className="chowMein" id="chowMein">
                     <div className="sectionHeader">
                         <h1>Chow Mein</h1>
+                        <p>With Rice and Crispy Noodles</p>
                     </div>
                     <Row>
                         {ChowMein.map(food =>
@@ -149,6 +150,7 @@ function Allday() {
                 <div className="chopSuey" id="chopSuey">
                     <div className="sectionHeader">
                         <h1>Chop Suey</h1>
+                        <p>With Rice</p>
                     </div>
                     <Row>
                         {ChopSuey.map(food =>
@@ -166,6 +168,7 @@ function Allday() {
                 <div className="sweetAndSour" id="sweetAndSour">
                     <div className="sectionHeader">
                         <h1>Sweet And Sour</h1>
+                        <p>With Rice</p>
                     </div>
                     <Row>
                         {SweetAndSour.map(food =>
@@ -183,6 +186,7 @@ function Allday() {
                 <div className="eggFooYoung" id="eggFooYoung">
                     <div className="sectionHeader">
                         <h1>Egg Foo Young</h1>
+                        <p>With Rice</p>
                     </div>
                     <Row>
                         {EggFooYoung.map(food =>
@@ -200,6 +204,7 @@ function Allday() {
                 <div className="curry" id="curry">
                     <div className="sectionHeader">
                         <h1>Curry</h1>
+                        <p>With Rice</p>
                     </div>
                     <Row>
                         {Curry.map(food =>
@@ -217,6 +222,7 @@ function Allday() {
                 <div className="loMein" id="loMein">
                     <div className="sectionHeader">
                         <h1>Lo Mein</h1>
+                        <p>Soft Noodles</p>
                     </div>
                     <Row>
                         {LoMein.map(food =>
@@ -234,6 +240,7 @@ function Allday() {
                 <div className="chowFun" id="chowFun">
                     <div className="sectionHeader">
                         <h1>Chow Fun or Mei Fun</h1>
+                        <p>Rice Noodles</p>
                     </div>
                     <Row>
                         {ChowFun.map(food =>
@@ -251,6 +258,7 @@ function Allday() {
                 <div className="pork" id="pork">
                     <div className="sectionHeader">
                         <h1>Pork</h1>
+                        <p>With Rice</p>
                     </div>
                     <Row>
                         {Pork.map(food =>
@@ -268,6 +276,7 @@ function Allday() {
                 <div className="chicken" id="chicken">
                     <div className="sectionHeader">
                         <h1>Chicken</h1>
+                        <p>With Rice</p>
                     </div>
                     <Row>
                         {Chicken.map(food =>
@@ -285,6 +294,7 @@ function Allday() {
                 <div className="beef" id="beef">
                     <div className="sectionHeader">
                         <h1>Beef</h1>
+                        <p>With Rice</p>
                     </div>
                     <Row>
                         {Beef.map(food =>
@@ -302,6 +312,7 @@ function Allday() {
                 <div className="seafood" id="seafood">
                     <div className="sectionHeader">
                         <h1>Seafood</h1>
+                        <p>With Rice</p>
                     </div>
                     <Row>
                         {Seafood.map(food =>
@@ -319,6 +330,7 @@ function Allday() {
                 <div className="specialRecs" id="specialRecs">
                     <div className="sectionHeader">
                         <h1>Special Recommendations</h1>
+                        <p>Szechuan, Hunan, and Cantonese Style Dishes with Rice</p>
                     </div>
                     <Row>
                         {SpecialRecs.map(food =>
@@ -353,6 +365,7 @@ function Allday() {
                 <div className="chefsSpecial" id="chefsSpecial">
                     <div className="sectionHeader">
                         <h1>Chef's Special Suggestions</h1>
+                        <p>With White Rice</p>
                     </div>
                     <Row>
                         {ChefsSpecial.map(food =>
@@ -370,6 +383,7 @@ function Allday() {
                 <div className="specialCombo" id="specialCombo">
                     <div className="sectionHeader">
                         <h1>Special Combination Plates</h1>
+                        <p>Each Order Comes With Roast Pork Fried Rice and an Egg Roll</p>
                     </div>
                     <Row>
                         {SpecialCombo.map(food =>
@@ -401,7 +415,7 @@ function Allday() {
                         )}
                     </Row>
                 </div>
-                <div className="go-top"><a href="#menuNavigation"><i className="bi bi-arrow-up-circle-fill"></i></a></div>
+                <div className="go-top"><a href="#all-dayHeader"><i className="bi bi-arrow-up-circle-fill"></i></a></div>
             </Container>
         </section>
     );
